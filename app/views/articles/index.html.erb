@@ -1,0 +1,16 @@
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Article</h1>
+    <div class="col-md-8 my-4">
+      <% @articles.each do |article| %>
+        <div class="row">
+          <%= link_to article[:title], article_path(article), class:"fs-5" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-md-8 fs-4">
+      <%= link_to "Create new article", new_article_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+</div>
